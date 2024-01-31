@@ -1,0 +1,7 @@
+public interface Petal{
+
+    public void toBlossom();
+
+    public void fadeAway();
+
+}
