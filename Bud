@@ -1,0 +1,10 @@
+public class Bud extends Flower{
+
+    public Bud(String color) {
+        super(color);
+    }
+
+    public void printColor(){
+        System.out.println("The color of bud is " + getColor());
+    }
+}
