@@ -5,7 +5,7 @@ import java.util.HashSet;
 
 public class Lr11Kovb {
     private String[] array;
-    private int length;
+    private int length;  //arr already has own length method
 
     public Lr11Kovb(int length) {
         this.length = length;
@@ -16,12 +16,12 @@ public class Lr11Kovb {
         return length;
     }
 
-    public void setLength(int length){
+    public void setLength(int length){  //how this method should be used? it just rewrites parameter length without any effect on arr
         this.length = length;
     }
 
     public String getElement(int index) {
-        if (index >= 0 && index < length) {
+        if (index >= 0 && index < length) {   //what will be if I change length via setLength and use getElement
             return array[index];
         } else {
             throw new IndexOutOfBoundsException("Invalid index");
@@ -47,9 +47,11 @@ public class Lr11Kovb {
     public void printArray() {
         System.out.println("String array:");
         for (int i = 0; i < length; i++) {
-            System.out.println("Element " + i + ": " + array[i]);
+            System.out.println("Element " + i + ": " + array[i]); // it's done here: printElement
         }
     }
+    //where method for concat two arrays?
+    //where method for concat two arrays without duplication?
 
     public static void main(String[] args) {
         Lr11Kovb array1 = new Lr11Kovb(5);
@@ -65,7 +67,7 @@ public class Lr11Kovb {
         array1.printArray();
         array2.printArray();
 
-        HashSet<String> mergedSet = new HashSet<>();
+        HashSet<String> mergedSet = new HashSet<>();   //have you learned this collection? do y understand magic?
         for (int i = 0; i < array1.getLength(); i++) {
             mergedSet.add(array1.getElement(i));
         }
