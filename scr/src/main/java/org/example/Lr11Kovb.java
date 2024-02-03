@@ -9,7 +9,7 @@ public class Lr11Kovb {
 
     public Lr11Kovb(int length) {
         this.length = length;
-        array = new String[length];
+        this.array = new String[length];
     }
 
     public int getLength() {
